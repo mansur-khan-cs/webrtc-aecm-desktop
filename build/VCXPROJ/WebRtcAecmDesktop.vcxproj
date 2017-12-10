@@ -41,7 +41,7 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)\webRtcAecm\include;$(IncludePath)</IncludePath>
+    <IncludePath>$(SolutionDir)\..\webRtcAecm\include;$(IncludePath)</IncludePath>
     <OutDir>$(SolutionDir)\output</OutDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -58,7 +58,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>$(SolutionDir)\webRtcAecm\libs</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\..\webRtcAecm\libs</AdditionalLibraryDirectories>
       <AdditionalDependencies>aecm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
@@ -83,11 +83,14 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\webRtcAecm\include\echo_control_mobile.h" />
-    <ClInclude Include="..\webRtcAecm\include\typedefs.h" />
+    <ClInclude Include="..\..\webRtcAecm\include\echo_control_mobile.h" />
+    <ClInclude Include="..\..\webRtcAecm\include\typedefs.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\main\WebRtcAecmDesktop.cpp" />
+    <ClCompile Include="..\..\main\WebRtcAecmDesktop.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\..\webRtcAecm\libs\aecm.lib" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
